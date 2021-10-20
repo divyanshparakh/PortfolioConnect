@@ -1,0 +1,75 @@
+"
+npm install vue3-virtual-scroller - cancelled
+npm install vue-multiselect --save -- acha hai but vue3 not supported
+
+
+npm i --save cors server mey
+in root of front end added devserver address for cors
+for production mode: Use a .htaccess (Apache) or nginx.conf (Nginx) an set the header.
+
+
+npm i express-session (inside the backend) (will use it later)
+npm i helmet compression express-rate-limit
+express-validator is yet to be used
+npm install pg --save inside the backend
+installed dotenv to store the info for the database
+npm i joi (for input validation)
+npm i jsonwebtoken
+npm i axios vue-axios
+npm i vue-jwt-decode
+"
+
+
+
+vue-virtual-scroller - Loads only that components which are visible
+used api folder
+
+
+
+
+
+## Now Adding to heroku
+
+Settings -> Reveal Config Vars -> Add the token secret or jwt secret and some other variables
+
+heroku git:remote -a connect-portfolio
+
+comment under specified lines (in app.js) to get it work on heroku
+
+  // res.locals.message = err.message;
+  // res.locals.error = req.app.get("env") === "development" ? err : {};
+
+git add .
+git commit -m "Kuch Bhi"
+git push heroku master
+
+Also get database credentials from heroku website like host, database, user, port, password, url, heroku cli
+
+click on open app to get the URL of current SERVER
+in front app in vue.config.js change the server URL
+
+## Connect to heroku database
+heroku pg:psql
+
+to know current database -> SELECT current_database();
+
+
+heroku ps:restart to restart the server
+heroku logs --tail
+
+
+
+
+## To make heroku server work properly
+in Database.js file 
+
+const Pool = require("pg").Pool;
+
+const proConfig = {
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false ## this was added
+  }
+}
+
+
