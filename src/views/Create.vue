@@ -140,39 +140,30 @@
             ></textarea>
           </td>
         </tr>
-        <td>
-          <button @click="Counters.Organization++" class="add-button">+</button>
-        </td>
-        <tr>
-          <td>
-            <input type="text" placeholder="Github Profile ID" />
-          </td>
-          <td>
-            <input type="text" placeholder="LinkedIn Profile ID" />
-          </td>
-        </tr>
-        <tr class="certifcates">
-          <td v-for="i in Counters.Certificate" :key="i">
-            <label class="button" for="Certificate">
-              Upload Your Certificates
-            </label>
-            <input
-              type="file"
-              id="Certificate"
-              class="hidden"
-              name="Upload"
-              accept="application/pdf"
-            />
-          </td>
-          <td><button @click="Counters.Certificate++">+</button></td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td>
-            <button type="submit" class="submit-button">SUBMIT &#8595;</button>
-          </td>
-        </tr>
       </table>
+      <button @click="Counters.Organization++" class="add-button">+</button>
+      <span>
+        <input type="text" placeholder="Github Profile ID" />
+        <input type="text" placeholder="LinkedIn Profile ID" />
+      </span>
+      <span class="certifcates">
+        <div v-for="i in Counters.Certificate" :key="i">
+          <label class="button" for="Certificate">
+            Upload Your Certificates
+          </label>
+          <input
+            type="file"
+            id="Certificate"
+            class="hidden"
+            name="Upload"
+            accept="application/pdf"
+          />
+        </div>
+        <button @click="Counters.Certificate++" class="add-button">
+          &#9769;
+        </button>
+      </span>
+      <button type="submit" class="submit-button">SUBMIT &#8595;</button>
     </form>
     <div v-if="Error" class="error">{{ Error }}</div>
   </div>
@@ -291,96 +282,87 @@ export default {
       &-text {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: flex-start;
+        justify-content: space-around;
+        align-items: stretch;
         padding: 50px;
         tr {
           margin: 60px 0px;
           display: flex;
           flex-flow: column wrap;
+          border: 3px solid #e3507d;
+          padding: 50px;
+          min-width: 500px;
           td {
             margin: 10px;
-            input,
-            select,
-            textarea {
-              background-color: transparent;
-              color: #e3507d;
-              padding: 5px;
-              font-weight: 600;
-              font-size: 17px;
-              border: none;
-              border-bottom: 2px solid #e3507d;
-              &:focus,
-              &:hover {
-                box-shadow: 5px 7px 5px 4px rgba(0, 0, 0, 0.5);
-              }
-            }
-            input {
-              width: 400px;
-              height: 30px;
-            }
-            select {
-              width: 409px;
-              height: 45px;
-              // appearance: none;
-              option {
-                background: rgba(227, 80, 125, 0.6) !important;
-              }
-            }
-            textarea {
-              width: 370px;
-              margin: 50px;
-              color: #e3507d;
-              padding: 20px;
-              display: block;
-              &::placeholder {
-                padding: 10px;
-              }
-            }
-            button,
-            .button {
-              width: 260px;
-              height: 40px;
-              margin: 10px;
-              padding: 7px;
-              background-color: #140156;
-              border: 2px solid #e3507d;
-              color: #e3507d;
-              font-size: 17px;
-              font-weight: 600;
-              cursor: pointer;
-              &:hover {
-                background-color: #e3507d;
-                color: whitesmoke;
-              }
-            }
             .hidden {
               display: none;
             }
-            label {
-              display: flex;
-              justify-content: space-between;
-            }
           }
         }
-        .add-button {
-          margin: 450px 100px 0 0;
-          width: 50px;
-          height: 40px;
-          background-color: #140156;
-          border: 3px solid #e3507d;
-          color: #e3507d;
-          cursor: pointer;
-          border-radius: 50px;
-          font-size: 32px;
-          font-weight: 600;
-          padding-bottom: 45px;
-          position: absolute;
-          &:hover {
-            background-color: #e3507d;
-            color: whitesmoke;
-          }
+      }
+      input,
+      select,
+      textarea {
+        background-color: transparent;
+        color: #e3507d;
+        padding: 5px;
+        font-weight: 600;
+        font-size: 17px;
+        border: none;
+        border-bottom: 2px solid #e3507d;
+        &:focus,
+        &:hover {
+          box-shadow: 5px 7px 5px 4px rgba(0, 0, 0, 0.5);
         }
+      }
+      input {
+        width: 400px;
+        height: 30px;
+      }
+      select {
+        width: 409px;
+        height: 45px;
+        // appearance: none;
+        option {
+          background: rgba(227, 80, 125, 0.6) !important;
+        }
+      }
+      textarea {
+        width: 370px;
+        margin: 50px;
+        color: #e3507d;
+        padding: 20px;
+        display: block;
+        &::placeholder {
+          padding: 10px;
+        }
+      }
+      button {
+        background-color: #140156;
+        border: 3px solid #e3507d;
+        font-weight: 600;
+        padding: 7px;
+        color: #e3507d;
+        cursor: pointer;
+        &:hover {
+          background-color: #e3507d;
+          color: whitesmoke;
+        }
+      }
+      .add-button {
+        width: 50px;
+        border-radius: 50px;
+      }
+      span {
+        display: block;
+        margin: 100px;
+      }
+      .submit-button {
+        width: 260px;
+        margin: 10px;
+        font-size: 17px;
+        background-color: #140156;
+        border: 2px solid #e3507d;
       }
     }
   }

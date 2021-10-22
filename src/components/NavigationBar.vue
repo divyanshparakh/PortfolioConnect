@@ -94,7 +94,6 @@ export default {
         transition-duration: 1s;
         &.router-link-exact-active {
           color: whitesmoke;
-          text-decoration: underline;
         }
         &:hover {
           background-color: #e3507d;
