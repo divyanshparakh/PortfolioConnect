@@ -7,7 +7,7 @@
     />
     <div class="head-template-text">
       <div class="head-template-text-big">
-        Showcasing your Talent like never before
+        Showcase your Talent like never before
       </div>
       <div class="head-template-text-small">Flex your Skills Here</div>
     </div>
