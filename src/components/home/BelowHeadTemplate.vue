@@ -8,9 +8,9 @@
     <div class="below-head-template-text">
       <div class="below-head-template-text-big">About Skills</div>
       <div class="below-head-template-text-small">
-        There are many skills available in every domain
+        There are many skills available in every domain.
         <br />
-        that you think is good for you
+        Why don't try some of them?
       </div>
       <div class="below-head-template-text-small">
         Just Pick and Go with It!

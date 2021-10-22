@@ -116,24 +116,32 @@
             <input type="text" placeholder="Organization" />
           </td>
           <td>
-            <input type="date" />
+            <input
+              type="text"
+              maxlength="10"
+              minlength="10"
+              pattern="[0-9/]{10}"
+              placeholder="Start Date (DD/MM/YYYY)"
+            />
           </td>
           <td>
-            <input type="date" disabled />
-          </td>
-          <td>
-            <input type="url" placeholder="Organization's Logo URL" />
+            <input
+              type="text"
+              maxlength="10"
+              minlength="10"
+              placeholder="End Date (DD/MM/YYYY)"
+            />
           </td>
           <td>
             <textarea
               cols="30"
-              rows="2"
+              rows="5"
               placeholder="Your Experience and Achivements"
             ></textarea>
           </td>
         </tr>
         <td>
-          <button @click="Counters.Organization++">+</button>
+          <button @click="Counters.Organization++" class="add-button">+</button>
         </td>
         <tr>
           <td>
@@ -143,19 +151,25 @@
             <input type="text" placeholder="LinkedIn Profile ID" />
           </td>
         </tr>
-        <tr>
+        <tr class="certifcates">
           <td v-for="i in Counters.Certificate" :key="i">
             <label class="button" for="Certificate">
               Upload Your Certificates
             </label>
-            <input type="file" id="Certificate" class="hidden" />
+            <input
+              type="file"
+              id="Certificate"
+              class="hidden"
+              name="Upload"
+              accept="application/pdf"
+            />
           </td>
           <td><button @click="Counters.Certificate++">+</button></td>
         </tr>
         <tr></tr>
         <tr>
           <td>
-            <button type="submit">SUBMIT &#8595;</button>
+            <button type="submit" class="submit-button">SUBMIT &#8595;</button>
           </td>
         </tr>
       </table>
@@ -284,8 +298,6 @@ export default {
           margin: 60px 0px;
           display: flex;
           flex-flow: column wrap;
-          justify-content: flex-start;
-          align-items: center;
           td {
             margin: 10px;
             input,
@@ -345,19 +357,25 @@ export default {
             .hidden {
               display: none;
             }
+            label {
+              display: flex;
+              justify-content: space-between;
+            }
           }
         }
-        button {
+        .add-button {
           margin: 450px 100px 0 0;
           width: 50px;
           height: 40px;
           background-color: #140156;
-          border: 2px solid #e3507d;
+          border: 3px solid #e3507d;
           color: #e3507d;
           cursor: pointer;
-          border-radius: 100px;
+          border-radius: 50px;
           font-size: 32px;
-          font-weight: 800;
+          font-weight: 600;
+          padding-bottom: 45px;
+          position: absolute;
           &:hover {
             background-color: #e3507d;
             color: whitesmoke;

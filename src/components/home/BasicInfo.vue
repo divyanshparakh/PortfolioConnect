@@ -4,35 +4,29 @@
       <p class="title">Our Social Media Presence :-</p>
       <ul>
         <li>
-          <a
-            href="https://in.linkedin.com/company/juggernaut-racing"
-            target="_blank"
+          <a href="https://in.linkedin.com/" target="_blank"
             ><img src="@/assets/social-media/001-linkedin.png" title="LinkedIn"
           /></a>
         </li>
         <li>
-          <a
-            href="https://www.instagram.com/juggernaut_racing/?hl=en"
-            target="_blank"
+          <a href="https://www.instagram.com/" target="_blank"
             ><img
               src="@/assets/social-media/002-instagram.png"
               title="Instagram"
           /></a>
         </li>
         <li>
-          <a href="https://twitter.com/rhsjuggernauts?lang=en" target="_blank"
+          <a href="https://twitter.com/" target="_blank"
             ><img src="@/assets/social-media/003-twitter.png" title="Twitter"
           /></a>
         </li>
         <li>
-          <a
-            href="https://www.youtube.com/channel/UCha7XK1BeiQiouHVwJn59SA"
-            target="_blank"
+          <a href="https://www.youtube.com/channel/" target="_blank"
             ><img src="@/assets/social-media/004-youtube.png" title="Youtube"
           /></a>
         </li>
         <li>
-          <a href="https://www.facebook.com/juggernautracing/" target="_blank"
+          <a href="https://www.facebook.com/" target="_blank"
             ><img src="@/assets/social-media/005-facebook.png" title="Facebook"
           /></a>
         </li>
@@ -63,7 +57,11 @@ export default {
   display: flex;
   margin: auto;
   .SocialMedias {
-    padding: 200px 0px 350px 10px;
+    padding: 150px 0px 400px 10px;
+    .title {
+      font-size: 24px;
+      margin-top: 60px;
+    }
     ul {
       display: flex;
       flex-flow: row;
