@@ -1,7 +1,9 @@
 <template>
   <div class="about">
     <h1>ABOUT PAGE</h1>
-    <div class="about-form"></div>
+    <div class="about-form">
+      <p>This Website is created by Divyansh Parakh</p>
+    </div>
     <div v-if="Error" class="error">{{ Error }}</div>
   </div>
 </template>
@@ -47,6 +49,11 @@ export default {
     &-form {
       margin: auto;
       min-height: 78.4vh; // temp
+      color: white;
+      p {
+        padding: 100px;
+        font-size: 24px;
+      }
     }
   }
 }

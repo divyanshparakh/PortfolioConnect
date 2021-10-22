@@ -61,7 +61,7 @@ heroku logs --tail
 
 
 ## To make heroku server work properly
-in Database.js file 
+in Database.js file
 
 const Pool = require("pg").Pool;
 

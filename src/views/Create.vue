@@ -242,9 +242,9 @@ export default {
   },
   mounted() {
     this.LoginCheck();
-    this.FullName = this.$store.state.User.FullName;
-    this.PhoneNumber = this.$store.state.User.PhoneNumber;
-    this.Email = this.$store.state.User.Email;
+    this.FullName = this.$store.state.User["FullName"];
+    this.PhoneNumber = this.$store.state.User["PhoneNumber"];
+    this.Email = this.$store.state.User["Email"];
   },
 };
 </script>

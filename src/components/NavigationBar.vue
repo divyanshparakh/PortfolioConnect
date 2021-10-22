@@ -81,18 +81,20 @@ export default {
       display: flex;
       flex-flow: row nowrap;
       justify-content: flex-end;
-      align-items: center;
       &-items {
+        text-align: center;
         font-size: 17px;
         padding: 20px;
+        max-height: 50px;
         font-weight: 800;
         text-decoration: none;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+        font-family: "Courier New", "Georgia", Geneva, Verdana, sans-serif;
         color: #2de3ff;
-        width: 150px;
+        min-width: 110px;
         transition-duration: 1s;
         &.router-link-exact-active {
           color: whitesmoke;
+          text-decoration: underline;
         }
         &:hover {
           background-color: #e3507d;
@@ -113,14 +115,13 @@ export default {
       }
       .login-logout {
         cursor: pointer;
-        width: 100px;
+        width: 130px;
         height: 60px;
         background-color: #140156;
-        border: 2px solid #e3507d;
+        border: 3px solid #e3507d;
         font-weight: 600;
         padding: 15px;
         font-size: 17px;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
         transition-duration: 1s;
         p {
           color: #e3507d;
