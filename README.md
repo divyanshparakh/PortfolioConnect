@@ -37,10 +37,25 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <br />
 
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+It is Web App which is made to record different programming skills and achievements of the user.
+User is authenticated in the login page using JSON Web Token and then the whole transaction of the user is being processed using the created
+cookie.
+All the information is then stored in the database using express.js and postgres.
+
+<br />
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+
 ## Project setup
 
-```
-npm install
+```sh
+npm install npm@latest -g
 ```
 
 #### Compiles and hot-reloads for development
@@ -79,6 +94,20 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <br />
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Project Link: [https://github.com/divz11/PortfolioConnect](https://github.com/divz11/PortfolioConnect)
 
 ### Customize configuration
 
