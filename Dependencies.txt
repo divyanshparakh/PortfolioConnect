@@ -39,9 +39,13 @@ comment under specified lines (in app.js) to get it work on heroku
   // res.locals.message = err.message;
   // res.locals.error = req.app.get("env") === "development" ? err : {};
 
+
 git add .
 git commit -m "Kuch Bhi"
+For adding github address: git remote add origin https://adfd/User_name/sample.git
 git push heroku master
+for github: git push --set-upstream origin master
+
 
 Also get database credentials from heroku website like host, database, user, port, password, url, heroku cli
 
@@ -49,12 +53,12 @@ click on open app to get the URL of current SERVER
 in front app in vue.config.js change the server URL
 
 ## Connect to heroku database
-heroku pg:psql
+heroku pg:psql DATABASE_URL
 
 to know current database -> SELECT current_database();
 
 
-heroku ps:restart to restart the server
+heroku ps:restart // to restart the server
 heroku logs --tail
 
 
@@ -73,3 +77,8 @@ const proConfig = {
 }
 
 
+
+
+
+
+export NODE_OPTIONS=--openssl-legacy-provider
